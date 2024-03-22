@@ -1,0 +1,218 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        .style7 {font-size: 14px}
+        .style8 {color: #FFFF00}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF RAINFALL ESTIMATE PREDICTION TYPE !!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1122" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center" class="style4">FEED ALL DATA SETS DETAILS HERE </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="287" height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style8">Enter Date</span></strong></div></td>
+                                    <td width="269">
+                                      <div align="center">
+                                        <input type="text" name="Date">
+                                    </div></td>
+                                    <td width="269" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Location</div>
+                                    </div></td>
+                                    <td width="269">
+                                      <div align="center">
+                                        <input type="text" name="Location">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style8">Enter MinTemp</span></strong></div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="MinTemp">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter MaxTemp</div>
+                                    </div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="MaxTemp">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style8">Enter Rainfall</span></strong></div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="Rainfall">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Evaporation</div>
+                                    </div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="Evaporation">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style8">Enter Sunshine</span></strong></div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="Sunshine">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter WindGustDir</div>
+                                    </div></td>
+                                    <td><div align="center">
+                                      <input type="text" name="WindGustDir">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style8">Enter WindGustSpeed</span></strong></div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="WindGustSpeed">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter WindDir</div>
+                                    </div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="WindDir">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style8">Enter WindSpeed</span></strong></div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="WindSpeed">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Humidity</div>
+                                    </div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="Humidity">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style8">Enter Pressure</span></strong></div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="Pressure">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Cloud</div>
+                                    </div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="Cloud">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style8">Enter Temp</span></strong></div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="Temp">
+                                    </div></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Id Number</div>
+                                    </div></td>
+                                    <td>
+                                      <div align="center">
+                                        <input type="text" name="idnumber">
+                                    </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center"><span class="style4 style2">
+                                      <input name="submit" type="submit" class="style1" value="Predict">
+                                    </span></div></td>
+                                  </tr>
+  <td><p>&nbsp; </p>
+          <p>&nbsp;</p></td>
+  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table border="0" align="center" >
+                                    <tr><td width="246" bgcolor="#FF0000"><div align="center"><span class="style6"><span class="style7">SENTIMENT ANALYSIS TYPE</span> ::</span> </div></td>
+
+
+
+                                      <td width="175" bgcolor="#FFFF00" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{objs}}</div></td></tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
